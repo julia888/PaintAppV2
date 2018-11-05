@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <script src="script/script.js"></script>
+        <script src="script/addTabs.js"></script>
+        <script src="script/delTabs.js"></script>
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body>
+    <header>
+        <h1>Paint App</h1>
+    </header>
+        <div class="main">
+
+            <div class="left_col">
+                <div class="controls">
+                    <p>Color</p>
+                    <input type="text" name="input_form" id="input_form" value="">
+                    <p>Figure</p>
+                    <select id="selectFigure">
+                        <option id="rectangle" value="rectangle">rectangle</option>
+                        <option id="circle" value="circle">circle</option>
+                        <option id="hexagon" value="hexagon">hexagon</option>
+                    </select><br>
+                    <button type="button" id="pen" onclick="setPen()">Pen</button>
+                    <p>Size</p>
+                    <input type="range" id="size" min="0" max="100" step="1" value="1" oninput="changeSize()">
+                </div>
+                <div>
+                    <h3>Status</h3>
+                    <p>Color: <span id="colorName">black</span> </p>
+                    <div id="color"></div>
+                </div>
+            </div>
+
+            <div id="canvasAndTabs">
+                <div id="tabs">
+                    <input type="button" value="Add Tab" id="addTab" onclick="addTab()">
+                    <!--здесь будут табы-->
+                    <div id="blockTabs">
+
+                    </div>
+                </div>
+
+                <div id="allContent">
+
+                </div>
+            </div>
+
+        </div>
+    <footer>
+        <p>Coordinates: <span id="coordinates"></span></p>
+    </footer>
+    </body>
+</html>
